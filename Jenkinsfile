@@ -42,7 +42,7 @@ pipeline {
       }      
       steps {
           script {
-            buildImage()
+            buildImage 'charlydt/jenkins-app:1.1'
           }
       }   
     }
