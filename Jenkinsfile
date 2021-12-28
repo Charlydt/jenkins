@@ -13,7 +13,7 @@ pipeline {
         }
       }
     }
-    stage("init") {
+    stage("test") {
       steps {
         script {
           echo "Testing the application..."
