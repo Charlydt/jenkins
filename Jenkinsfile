@@ -7,8 +7,10 @@ pipeline {
   }
   stages {
     stage("init") {
-      script {
-        gv = load "script.goovy"
+      steps {
+        script {
+          gv = load "script.goovy"
+        }
       }
     }
     stage("build jar") {
