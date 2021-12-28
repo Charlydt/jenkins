@@ -4,7 +4,7 @@ pipeline {
     mvn 'maven-3.8'
   }
   stages {
-    stage("build jar) {
+    stage("build jar") {
       steps {
         script {
           echo "building the application..."
