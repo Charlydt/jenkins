@@ -34,7 +34,7 @@ pipeline {
         }
       }
     }
-    stage("build image") {
+    stage("build and push image") {
       when {
         expression {
           BRANCH_NAME == 'main'
@@ -43,6 +43,8 @@ pipeline {
       steps {
           script {
             buildImage 'charlydt/jenkins-app:1.1'
+            dockerLogin()
+            dockerPush 'charlydt/jenkins-app:1.1'
           }
       }   
     }
